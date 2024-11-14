@@ -92,10 +92,10 @@ with tab1:
         Usia = st.slider("Usia (Age)", 10, 19, 10)
         Jenis_Kelamin = st.selectbox("Jenis Kelamin (Gender)", ["Laki-laki", "Perempuan"])
         Jenis_Kelamin_value = 1 if Jenis_Kelamin == "Laki-laki" else 0
-        BMI = st.number_input("BMI", min_value=10.0, max_value=35.0, value=20.0)
+        BMI = st.number_input("BMI", min_value=10.0, max_value=35.0, value=20.0, format="%.1f")
         Kadar_Gula_Darah = st.slider("Kadar Gula Darah", 80, 240, 140)
         Tekanan_Darah = st.slider("Tekanan Darah", 70, 180, 100)
-        HbA1c = st.number_input("HbA1c", min_value=0.0, max_value=10.0, value=5.0)
+        HbA1c = st.number_input("HbA1c", min_value=3.0, max_value=10.0, value=4.0, format="%.1f")
         submitted = st.form_submit_button("Predict")
 
         # If the form is submitted, predict the probability of diabetes mellitus
